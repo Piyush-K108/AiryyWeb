@@ -15,7 +15,7 @@ body {
   flex-direction: column;
 
   margin: 0;
-
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
 
   @apply bg-dimWhite  dark:bg-black   text-black dark:text-white ;
