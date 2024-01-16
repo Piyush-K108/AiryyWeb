@@ -15,7 +15,7 @@ const Bikes = () => {
   const [isHoveredBox4 , setIsHoveredBox4] = useState(false) ;
   const [isHoveredBox5 , setIsHoveredBox5] = useState(false) ;
   return (
-    <div className="h-screen xs:py-[15px] xs:w-full  bg-gradient-to-r from-yellow-500 to-yellow-300  rounded-3xl bg-center snap-center xs:snap-start items-center justify-center flex flex-col  xs:m-0 m-10 py-[15px]">
+    <div className="h-screen xs:py-[15px] xs:w-full  bg-gradient-to-b from-yellow-500 via-black to-yellow-black  rounded-3xl bg-center snap-center xs:snap-start items-center justify-center flex flex-col  xs:m-0 m-10 py-[15px]">
       <h1 className="text-center  xs:w-[300px] xs:text-[18px] font-poppins text-[30px] font-bold text-black bg-yellow-400 w-[600px]  rounded-2xl py-2">
         The Benefits of Riding with Us
       </h1>
