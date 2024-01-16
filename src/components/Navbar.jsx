@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect,useRef } from "react";
 import { CiFacebook } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa6";
 import { RiTwitterXLine } from "react-icons/ri";
@@ -7,7 +7,8 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import CallIcon from "@mui/icons-material/Call";
 import Slide from "react-reveal/Slide";const currentYear = new Date().getFullYear();
 const Navbar = () => {
-  const[isDropDown , setIsDropDown] = useState(false)
+  const [isDropDown, setIsDropDown] = useState(false);
+  const dropdownRef = useRef();
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -20,7 +21,19 @@ const Navbar = () => {
     const whatsappLink = `https://wa.me/${whatsappNumber}`;
     window.location.href = whatsappLink;
   };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropDown(false);
+      }
+    };
 
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
   const [MobileMenu, setMobileMenu] = useState(false);
   return (
     <div id="Nav" className="">
@@ -241,7 +254,7 @@ const Navbar = () => {
               </a>
               {isDropDown && (
                 <Slide right>
-                  <div className="absolute top-full  mt-2 bg-white rounded-xl w-[150px] shadow-xl py-4 px-[15px]">
+                  <div  ref={dropdownRef} className="absolute top-full  mt-2 bg-white rounded-xl w-[150px] shadow-xl py-4 px-[15px]">
                     <ul className="flex flex-col">
                       <li
                         className="text-black mb-4 hover:underline cursor-pointer"
@@ -258,7 +271,7 @@ const Navbar = () => {
                           className="text-blue-700 font-bold text-[20px] mr-4"
                           fontSize="0"
                         />
-                        Direct Call
+                        <a href={`tel:${whatsappNumber}`}>Direct Call</a>
                       </li>
                     </ul>
                   </div>

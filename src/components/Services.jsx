@@ -37,7 +37,7 @@ const Services = () => {
                 </div>
                 <div className="px-2 py-2 bg-black rounded-md xs:py-1 xs:mt-3 mt-8 border border-slate-50 justify-start items-start gap-2 inline-flex group-hover:bg-white transition-all duration-300">
                   <a
-                    onClick={{ handleRentNowClick }}
+                    onClick={ handleRentNowClick}
                     className="text-white cursor-pointer  group-hover:text-black font-poppins  text-base font-semibold leading-[18px] xs:text-[10px]"
                   >
                     Get Started Today

@@ -15,7 +15,7 @@ body {
   flex-direction: column;
 
   margin: 0;
-  overflow-y: scroll;
+
   scroll-snap-type: y mandatory;
 
   @apply bg-dimWhite  dark:bg-black   text-black dark:text-white ;
@@ -95,6 +95,23 @@ body {
 }
 }
 
+
+
+@keyframes icon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+.animate-icon {
+  animation: icon 3.5s  linear infinite alternate-reverse;
+}
 
 
 

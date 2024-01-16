@@ -15,8 +15,9 @@ const Bikes = () => {
   const [isHoveredBox3, setIsHoveredBox3] = useState(false);
   const [isHoveredBox4, setIsHoveredBox4] = useState(false);
   const [isHoveredBox5, setIsHoveredBox5] = useState(false);
+  const [isHoveredBox6, setIsHoveredBox6] = useState(false);
   return (
-    <div className="h-screen xs:py-[15px] xs:w-full  bg-gradient-to-t from-black via-yellow-400 to-black  rounded-3xl bg-center snap-center xs:snap-start items-center justify-center flex flex-col  xs:m-0 m-10 py-[15px]">
+    <div className="h-screen xs:py-[15px] xs:w-full bg-gradient-to-t from-black  via-yellow-400 to-black rounded-3xl bg-center snap-center xs:snap-start items-center justify-center flex flex-col xs:m-0 py-[15px]">
       <h1 className="text-center  xs:w-[300px] xs:text-[18px] font-poppins text-[30px] font-bold text-white w-[600px]  rounded-2xl py-2">
         The Benefits of Riding with Us
       </h1>
@@ -25,7 +26,7 @@ const Bikes = () => {
         className="grid xs:grid-cols-2  xl:w-screen xl:ml-48 grid-cols-3 gap-20 xs:gap-10 xs:m-[5px]   py-16"
       >
         <div
-          class="relative  bg-gradient-to-r from-yellow-500 to-yellow-300   border  border-black shadow-2xl rounded-2xl xs:w-[150px] xs:h-[180px] w-[251px] h-[209px]"
+          class="relative  bg-gradient-to-r from-yellow-400 to-yellow-300   border  border-black shadow-2xl rounded-2xl xs:w-[150px] xs:h-[180px] w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox1(true)}
           onMouseLeave={() => setIsHoveredBox1(false)}
         >
@@ -72,7 +73,7 @@ const Bikes = () => {
 
         {/* BOX 2 */}
         <div
-          class="relative   border bg-gradient-to-r from-yellow-500 to-yellow-300  xs:w-[150px] xs:h-[180px]  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
+          class="relative   border bg-gradient-to-r from-yellow-400 to-yellow-300  xs:w-[150px] xs:h-[180px]  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox2(true)}
           onMouseLeave={() => setIsHoveredBox2(false)}
         >
@@ -120,7 +121,7 @@ const Bikes = () => {
 
         {/* BOX 3 */}
         <div
-          class="relative  bg-gradient-to-r from-yellow-500 to-yellow-300  xs:w-[150px] xs:h-[180px]   border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
+          class="relative  bg-gradient-to-r from-yellow-400 to-yellow-300  xs:w-[150px] xs:h-[180px]   border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox3(true)}
           onMouseLeave={() => setIsHoveredBox3(false)}
         >
@@ -167,7 +168,7 @@ const Bikes = () => {
 
         {/* BOX 4 */}
         <div
-          class="relative   border bg-gradient-to-r from-yellow-500 to-yellow-300  xs:w-[150px] xs:h-[180px] border-black shadow-2xl  rounded-2xl w-[251px] h-[209px]"
+          class="relative   border bg-gradient-to-r from-yellow-400 to-yellow-300  xs:w-[150px] xs:h-[180px] border-black shadow-2xl  rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox4(true)}
           onMouseLeave={() => setIsHoveredBox4(false)}
         >
@@ -214,7 +215,7 @@ const Bikes = () => {
 
         {/* BOX 5 */}
         <div
-          class="relative bg-gradient-to-r from-yellow-500 to-yellow-300   xs:w-[150px] xs:h-[180px]  border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
+          class="relative bg-gradient-to-r from-yellow-400 to-yellow-300   xs:w-[150px] xs:h-[180px]  border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox5(true)}
           onMouseLeave={() => setIsHoveredBox5(false)}
         >
@@ -262,9 +263,9 @@ const Bikes = () => {
 
         {/* BOX 6 */}
         <div
-          class="relative bg-gradient-to-r from-yellow-500 to-yellow-300   xs:w-[150px] xs:h-[180px]    border  border-black shadow-2xl  rounded-2xl w-[251px] h-[209px]"
-          onMouseEnter={() => setIsHoveredBox5(true)}
-          onMouseLeave={() => setIsHoveredBox5(false)}
+          class="relative bg-gradient-to-r from-yellow-400 to-yellow-300   xs:w-[150px] xs:h-[180px]    border  border-black shadow-2xl  rounded-2xl w-[251px] h-[209px]"
+          onMouseEnter={() => setIsHoveredBox6(true)}
+          onMouseLeave={() => setIsHoveredBox6(false)}
         >
           <img
             src={pin}
@@ -279,7 +280,7 @@ const Bikes = () => {
             src="https://via.placeholder.com/78x78"
             alt="Placeholder Image 1"
           /> */}
-            {isHoveredBox5 ? (
+            {isHoveredBox6 ? (
               <Fade bottom>
                 <div className="absolute top-[-40px] xs:left-[-100px] left-[-70px]">
                   <p className=" text-start xs:text-[12px] xs:w-[110px] w-[170px] text-black font-poppins font-bold">

@@ -20,10 +20,12 @@ const App = () => {
      
       <Navbar />
       <Hero />
+      
       <Services />
+      <About /> 
       <Bikes />
       <Testimonials />
-      <About />
+    
       <Contact />
       <Footer />
     </div>

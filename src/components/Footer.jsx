@@ -128,7 +128,7 @@ function Footer() {
       </div>
 
       {/* Dynamic date and website URL */}
-      <div className="w-screen snap-start justify-between flex xs:hidden ss:hidden px-44 text-white">
+      <div className="w-screen snap-end justify-between flex xs:hidden ss:hidden px-44 text-white">
       <p><span className="text-yellow-400">&copy;</span> {currentYear} airyyrides.com</p>
         {/* Social Links for larger screens */}
         <div className="flex xs:hidden ss:hidden dark:text-white flex-row gap-4 h-[5rem] ">

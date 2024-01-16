@@ -1,44 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { BsArrowUp } from "react-icons/bs";
-
 const Theme = () => {
-  const [scrolling, setScrolling] = useState(false);
   const [isLightMode, setIsLightMode] = useState(true);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [isInitialRenderComplete, setIsInitialRenderComplete] = useState(false);
-  const scrollProgressRef = useRef(null);
-  const calcScrollValue = () => {
-    const scrollProgress = scrollProgressRef.current;
-    const pos = document.documentElement.scrollTop;
-    const calcHeight =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-    const scrollValue = Math.round((pos * 100) / calcHeight);
-
-    if (pos > 100) {
-      scrollProgress.style.display = "grid";
-    } else {
-      scrollProgress.style.display = "none";
-    }
-
-    scrollProgress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
-  };
-  const handleScroll = () => {
-    setScrolling(window.scrollY > 150);
-  };
 
   useEffect(() => {
-    window.onscroll = calcScrollValue;
-    window.onload = calcScrollValue;
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.onscroll = null;
-    };
-  }, []);
-
-  useEffect(() => {
+    
     const isDarkMode =
       localStorage.theme === "dark" ||
       (localStorage.theme === undefined &&
@@ -47,7 +16,7 @@ const Theme = () => {
     setIsLightMode(!isDarkMode);
 
     // Apply the theme to the document
-    document.documentElement.classList.toggle("dark", isDarkMode);
+    document.documentElement.classList.toggle("dark", !isDarkMode);
 
     // If the theme is explicitly set in local storage, make sure to update it
     if (localStorage.theme) {
@@ -56,13 +25,15 @@ const Theme = () => {
 
     // Mark the initial render as complete
     setIsInitialRenderComplete(true);
+
+
   }, []);
 
   const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    const scrollPosition = window.scrollY;
+
+    console.log(scrollPosition);
+
   };
 
   const toggleTheme = () => {
@@ -72,28 +43,13 @@ const Theme = () => {
     document.documentElement.classList.toggle("dark", !isLightMode);
   };
 
-  const respectOsPreference = () => {
-    localStorage.removeItem("theme");
-
-    // Apply the theme based on the operating system preference
-    const isDarkMode = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    setIsLightMode(!isDarkMode);
-    document.documentElement.classList.toggle("dark", !isDarkMode);
-  };
-
   return (
     <>
       <div
-        className={`fixed z-[1001] ${
-          scrolling ? "z-[10000000]" : ""
-        } flex justify-end items-center h-full cursor-pointer right-0 md:-mr-9 xl:-mr-1 ${
-          scrolling ? "md:py-5 " : "md:py-0 "
-        } bg-transparent`}
+        className={`fixed z-[1001]  flex justify-end items-center h-full cursor-pointer right-0 md:-mr-9 xl:-mr-1  bg-transparent`}
       >
         {isInitialRenderComplete &&
-          isLightMode !== undefined && // Check if the initial render is complete and isLightMode is defined
+          isLightMode !== undefined &&
           (isLightMode ? (
             <FaSun
               onClick={toggleTheme}
@@ -111,19 +67,19 @@ const Theme = () => {
           onClick={() => {
             scrollToSection("Nav");
           }}
-          className={`fixed z-[1001] ${
-            scrolling ? "z-[10000000]" : ""
-          } text-white border bg-yellow-500 rounded-[50%]  flex justify-end items-end h-[3.4rem] w-[3.4rem] cursor-pointer right-0 bottom-10 md:-mr-9 xl:mr-10 ${
-            scrolling ? "md:py-5 " : "md:py-0 "
-          } bg-transparent`}
+          className={`fixed z-[1001] text-white border ${window.scrollY ? "hidden":""} bg-yellow-500 rounded-[50%]  flex justify-end items-end h-[3.4rem] w-[3.4rem] cursor-pointer right-0 bottom-10 md:-mr-9 xl:mr-10  bg-transparent`}
         >
           <BsArrowUp
             onClick={() => scrollToSection("Nav")}
-            style={{ height: "50px" }}
-        
-            className={`xl:mx-5 font-bold text-white sm:mr-10 xs:mr-[1.2rem]`}
+            style={{ height: "28px", width: "30px" }}
+            className={`   animate-icon mr-[0.7rem] mb-3 inset-0 text-white z-10 xs:mr-[1.2rem]`}
           />
-          <span className="absolute inset-0 border-[4px]  border-black rounded-[50%]"></span>
+
+          <span
+        
+            style={{ height: `100%` }}
+            className={`absolute inset-0 border-[3px] border-black border-t-[40px]  rounded-[50%]`}
+          ></span>
         </a>
       </div>
     </>
