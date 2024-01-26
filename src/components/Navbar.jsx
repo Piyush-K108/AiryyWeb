@@ -5,7 +5,8 @@ import { RiTwitterXLine } from "react-icons/ri";
 import Logo from "../assets/airyyLogo.png";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import CallIcon from "@mui/icons-material/Call";
-import Slide from "react-reveal/Slide";const currentYear = new Date().getFullYear();
+import Slide from "react-reveal/Slide";
+const currentYear = new Date().getFullYear();
 const Navbar = () => {
   const [isDropDown, setIsDropDown] = useState(false);
   const dropdownRef = useRef();
@@ -36,7 +37,7 @@ const Navbar = () => {
   }, []);
   const [MobileMenu, setMobileMenu] = useState(false);
   return (
-    <div id="Nav" className="">
+    <div id="Nav" className=" ">
       <header className="sticky snap-start z-[139]  border-b border-transparent  ">
         <div className="md:max-w-7xl mx-auto w-full max-w-5xl px-6">
           <div className="absolute left-0 top-0 z-20 flex w-full flex-col items-center bg-root md:hidden">

@@ -6,7 +6,7 @@ import Img4 from "../assets/bikeImg2.png";
 import Img5 from "../assets/bikeImg1.png";
 import pin from "../assets/Pin.png";
 import earth from "../assets/earth.png"
-import BG from "../assets/Bgforbikes.jpg";
+
 // import { useState } from 'rea
 import Fade from "react-reveal/Fade";
 const Bikes = () => {

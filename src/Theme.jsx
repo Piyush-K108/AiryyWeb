@@ -67,7 +67,7 @@ const Theme = () => {
           onClick={() => {
             scrollToSection("Nav");
           }}
-          className={`fixed z-[1001] text-white border ${window.scrollY ? "hidden":""} bg-yellow-500 rounded-[50%]  flex justify-end items-end h-[3.4rem] w-[3.4rem] cursor-pointer right-0 bottom-10 md:-mr-9 xl:mr-10  bg-transparent`}
+          className={`fixed z-[1001] text-white border ${window.scrollY ? "":""} bg-yellow-500 rounded-[50%]  flex justify-end items-end h-[3.4rem] w-[3.4rem] cursor-pointer right-0 bottom-10 md:-mr-9 xl:mr-10  bg-transparent`}
         >
           <BsArrowUp
             onClick={() => scrollToSection("Nav")}
@@ -78,7 +78,7 @@ const Theme = () => {
           <span
         
             style={{ height: `100%` }}
-            className={`absolute inset-0 border-[3px] border-black border-t-[40px]  rounded-[50%]`}
+            className={`absolute inset-0 border-[3px]  border-t-[45-3px]  rounded-[50%]`}
           ></span>
         </a>
       </div>

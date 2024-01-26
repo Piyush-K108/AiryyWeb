@@ -15,10 +15,7 @@ function Footer() {
     <>
       {/* Existing footer content */}
 
-      <div
-        id="Footer"
-        className="w-full   pb-20  h-3/4 xs:h-full xs:mb-20 "
-      >
+      <div id="Footer" className="w-full   pb-20  h-3/4 xs:h-full xs:mb-20 ">
         <div className="md:flex-row sm:flex-col ss:flex-col xs:flex-col flex  items-center justify-around px-14">
           <div className="xs:flex xs:flex-col xs:-mb-40 ml-20 xs:ml-20 ">
             <div className="flex-auto xs:w-screen xs:justify-start  xs:items-center ">
@@ -34,17 +31,15 @@ function Footer() {
               </a>
             </div>
             <div className="xs:mr-10 xs:w-screen xs:flex xs:justify-start xs:items-center">
-            <h2 className="dark:text-gray-300 ml-6 font-poppins mt-1  xs:-mt-8  xs:text-[18px] text-[20px] font-medium">
-              Rent it now!
-            </h2>
-            <p className="dark:text-gray-300  ml-6 ss:text-[20px] ss:text-center  font-poppins mt-1 xs:hidden xs:text-[18px] text-[25px]">
-              Explore the city with ease. Rent a bike today!
-            </p>
-            
+              <h2 className="dark:text-gray-300 ml-6 font-poppins mt-1  xs:-mt-8  xs:text-[18px] text-[20px] font-medium">
+                Rent it now!
+              </h2>
+              <p className="dark:text-gray-300  ml-6 ss:text-[20px] ss:text-center  font-poppins mt-1 xs:hidden xs:text-[18px] text-[25px]">
+                Explore the city with ease. Rent a bike today!
+              </p>
             </div>
-            
           </div>
-          <Zoom bottom>
+          <Zoom right>
             <img
               src={FooterImg}
               alt="Footer Img"
@@ -55,26 +50,31 @@ function Footer() {
           </Zoom>
         </div>
 
-   
-        <div className="flex flex-row  xs:flex-col  ss:ml-0 ss:px-4 xs:px-8 xs:py-3 justify-around items-center ml-4 py-6">
+        <div className="flex flex-row xs:flex-col ss:ml-0 ss:px-4 xs:px-8 xs:py-3 justify-around items-center ml-4 py-6">
           {/* Contact information */}
-          <div className="flex flex-col  dark:text-white">
+          <div className="flex flex-col dark:text-white">
             <h1 className="font-bold font-poppins pb-2 ss:text-[18px] xs:text-[18px] text-[25px] border-yellow-200">
               Contact US
             </h1>
-            <ul className="xs:flex xs:flex-col  xs:gap-2">
+            <ul className="xs:flex xs:flex-col xs:gap-2">
               <li className="dark:text-white">
                 <PhoneInTalkOutlinedIcon className="text-yellow-400" />{" "}
-                9826977757
+                <a href="tel:9826977757">9826977757</a>
               </li>
               <li className="dark:text-white">
                 <AttachEmailOutlinedIcon className="text-yellow-400" />{" "}
-                airyyrides@gmail.com
+                <a href="mailto:airyyrides@gmail.com">airyyrides@gmail.com</a>
               </li>
               <li className="dark:text-white">
-                <PlaceOutlinedIcon className="text-yellow-400" /> 160/4,
-                Bholaram Ustad Marg, Indrapuri Colony, Bhanwar Kuwa, Indore,
-                Madhya Pradesh 452001
+                <PlaceOutlinedIcon className="text-yellow-400" />{" "}
+                <a
+                  href="https://www.google.com/maps/place/AiRYY+Rides/@22.6881198,75.8581969,17z/data=!3m1!4b1!4m6!3m5!1s0x3962fd038adfe389:0x2aa0548bdd308fea!8m2!3d22.6881149!4d75.8630678!16s%2Fg%2F11stj9kj6g?entry=ttu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  160/4, Bholaram Ustad Marg, Indrapuri Colony, Bhanwar Kuwa,
+                  Indore, Madhya Pradesh 452001
+                </a>
               </li>
             </ul>
           </div>
@@ -101,7 +101,7 @@ function Footer() {
         </div>
 
         {/* Useful Links for smaller screens with image */}
-        <div className="flex flex-row snap-center sm:hidden">
+        <div className="flex flex-row snap-start sm:hidden">
           <div className="dark:text-white flex flex-col w-screen ml-[2.8rem] mt-10 justify-start">
             <h1 className="font-bold font-poppins pb-4 ss:text-[14px] xs:text-[20px] text-[25px]">
               Useful Links
@@ -119,17 +119,20 @@ function Footer() {
             </ul>
           </div>
           <div className="flex  dark:text-white flex-col gap-4 h-[11rem] mr-10 pt-8">
-            <div className="border-y-2 mt-4 border-yellow-400 "/>
-          <CiFacebook size={35} />
-          <RiTwitterXLine className="cursor-pointer mt-[0.06rem]" size={28} />
-          <FaInstagram className="cursor-pointer mt-[0.06rem]" size={28} />
-        </div>
+            <div className="border-y-2 mt-4 border-yellow-400 " />
+            <CiFacebook size={35} />
+            <RiTwitterXLine className="cursor-pointer mt-[0.06rem]" size={28} />
+            <FaInstagram className="cursor-pointer mt-[0.06rem]" size={28} />
+          </div>
         </div>
       </div>
 
       {/* Dynamic date and website URL */}
       <div className="w-screen snap-end justify-between flex xs:hidden ss:hidden px-44 text-white">
-      <p><span className="text-yellow-400">&copy;</span> {currentYear} airyyrides.com</p>
+        <p>
+          <span className="text-yellow-400">&copy;</span> {currentYear}{" "}
+          airyyrides.com
+        </p>
         {/* Social Links for larger screens */}
         <div className="flex xs:hidden ss:hidden dark:text-white flex-row gap-4 h-[5rem] ">
           <CiFacebook size={28} />
@@ -137,11 +140,13 @@ function Footer() {
           <FaInstagram className="cursor-pointer mt-[0.06rem]" size={28} />
         </div>
       </div>
-      
+
       <div className="w-screen snap-start justify-center pb-6 flex sm:hidden  text-white">
-        <p><span className="text-yellow-400">&copy;</span> {currentYear} airyyrides.com</p>
+        <p>
+          <span className="text-yellow-400">&copy;</span> {currentYear}{" "}
+          airyyrides.com
+        </p>
         {/* Social Links for larger screens */}
-       
       </div>
     </>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-import Bike1 from "../assets/out-2.png";
 import ImageCarousel from "./ImageCoursel";
 import { frame, motion } from "framer-motion";
 

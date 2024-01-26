@@ -30,6 +30,7 @@
     "react-reveal": "^1.2.2",
     "react-slick": "^0.29.0",
     "react-three": "^0.9.7",
+    "react-use": "^17.5.0",
     "sass": "^1.69.5",
     "smooth-scroll": "^16.1.3",
     "styled-components": "^6.1.6",
