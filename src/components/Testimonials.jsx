@@ -4,7 +4,7 @@ import { monials } from "../Monials";
 import Fade from "react-reveal/Fade";
 const BlockquoteComponent = ({ monial, index }) => {
   return (
-    <div className="p-10 xs:px-0 xs:py-0 xs:mb-0  keen-slider__slide  text-black flex flex-row justify-between">
+    <div className="p-10 xs:px-40 xs:py-0 xs:mb-0  keen-slider__slide  text-black flex flex-row justify-between">
       <div className="flex flex-col  h-60   xs:ml-8 sm:justify-between">
         {/* text */}
         <div className="flex flex-row w-80">

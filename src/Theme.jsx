@@ -1,24 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { BsArrowUp } from "react-icons/bs";
 
 const Theme = () => {
-  const [isLightMode, setIsLightMode] = useState(false);
-
   useEffect(() => {
-    const isDarkMode =
-      localStorage.theme === "dark" ||
-      (localStorage.theme === undefined &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-    setIsLightMode(!isDarkMode);
-
-    // Apply the theme to the document
-    document.documentElement.classList.toggle("dark", !isDarkMode);
-
-    // If the theme is explicitly set in local storage, make sure to update it
-    if (localStorage.theme === undefined) {
-      localStorage.theme = isDarkMode ? "dark" : "light";
-    }
+    // Always set the theme to dark during initialization
+    document.documentElement.classList.add("dark");
+    localStorage.theme = "dark";
   }, []);
 
   const scrollToSection = (sectionId) => {

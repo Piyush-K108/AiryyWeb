@@ -12,7 +12,7 @@ const currentYear = new Date().getFullYear();
 
 function Footer() {
   return (
-    <>
+    <div className="snap-end">
       {/* Existing footer content */}
 
       <div id="Footer" className="w-full   pb-20  h-3/4 xs:h-full xs:mb-20 ">
@@ -30,7 +30,7 @@ function Footer() {
                 />
               </a>
             </div>
-            <div className="xs:mr-10 xs:w-screen xs:flex xs:justify-start xs:items-center">
+            <div className="xs:mr-10  xs:w-screen xs:flex xs:justify-start xs:items-center">
               <h2 className="dark:text-gray-300 ml-6 font-poppins mt-1  xs:-mt-8  xs:text-[18px] text-[20px] font-medium">
                 Rent it now!
               </h2>
@@ -50,7 +50,7 @@ function Footer() {
           </Zoom>
         </div>
 
-        <div className="flex flex-row xs:flex-col ss:ml-0 ss:px-4 xs:px-8 xs:py-3 justify-around items-center ml-4 py-6">
+        <div className="flex  flex-row xs:flex-col ss:ml-0 ss:px-4 xs:px-8 xs:py-3 justify-around items-center ml-4 py-6">
           {/* Contact information */}
           <div className="flex flex-col dark:text-white">
             <h1 className="font-bold font-poppins pb-2 ss:text-[18px] xs:text-[18px] text-[25px] border-yellow-200">
@@ -101,7 +101,7 @@ function Footer() {
         </div>
 
         {/* Useful Links for smaller screens with image */}
-        <div className="flex flex-row snap-start sm:hidden">
+        <div className="flex flex-row  sm:hidden">
           <div className="dark:text-white flex flex-col w-screen ml-[2.8rem] mt-10 justify-start">
             <h1 className="font-bold font-poppins pb-4 ss:text-[14px] xs:text-[20px] text-[25px]">
               Useful Links
@@ -128,27 +128,27 @@ function Footer() {
       </div>
 
       {/* Dynamic date and website URL */}
-      <div className="w-screen snap-end justify-between flex xs:hidden ss:hidden px-44 text-white">
+      <div className="w-screen  justify-between flex xs:hidden  ss:hidden px-44 text-white">
         <p>
           <span className="text-yellow-400">&copy;</span> {currentYear}{" "}
           airyyrides.com
         </p>
         {/* Social Links for larger screens */}
-        <div className="flex xs:hidden ss:hidden dark:text-white flex-row gap-4 h-[5rem] ">
+        <div className="flex xs:hidden ss:hidden dark:text-white  flex-row gap-4 h-[5rem] ">
           <CiFacebook size={28} />
           <RiTwitterXLine className="cursor-pointer mt-[0.06rem]" size={28} />
           <FaInstagram className="cursor-pointer mt-[0.06rem]" size={28} />
         </div>
       </div>
 
-      <div className="w-screen snap-start justify-center pb-6 flex sm:hidden  text-white">
+      <div className="w-screen -mt-20 justify-center pb-6 flex sm:hidden  text-white">
         <p>
           <span className="text-yellow-400">&copy;</span> {currentYear}{" "}
           airyyrides.com
         </p>
         {/* Social Links for larger screens */}
       </div>
-    </>
+    </div>
   );
 }
 
