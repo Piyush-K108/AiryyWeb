@@ -17,14 +17,14 @@ const Hero = () => {
       <div className="absolute sm:hidden   left-[20px] sm:left-[55px]">
         <div className="relative z-10 top-[260px] ">
           <motion.span className="text-yellow-500 xs:text-5xl ss:text-5xl  sm:text-6xl   font-medium font-poppins uppercase leading-[48px] tracking-[2.88px]">
-            Great Rides
+          AiRYY Rides
           </motion.span>
 
           <motion.span className="text-yellow-400 text-opacity-80 xs:text-5xl ss:text-5xl  sm:text-6xl   font-medium font-poppins uppercase leading-[48px] tracking-[2.88px]">
             !<br />
           </motion.span>
           <motion.span className="dark:text-white xs:text-2xl ss:text-3xl sm:text-4xl  font-medium font-poppins uppercase leading-[48px] tracking-widest">
-            Rent-Return-Repete
+          Rent, Return, Repeat
           </motion.span>
           <motion.span className="text-white text-[45px] font-medium font-['Fredoka'] capitalize leading-[48px] tracking-[5.40px]">
             .
