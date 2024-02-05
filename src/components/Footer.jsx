@@ -7,50 +7,50 @@ import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import { CiFacebook } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa6";
 import { RiTwitterXLine } from "react-icons/ri";
-import Logo from "../assets/airyyLogo.png";
+import Logo from "../assets/logo.png";
+
 const currentYear = new Date().getFullYear();
 
 function Footer() {
   return (
     <div className="snap-end">
       {/* Existing footer content */}
-
-      <div id="Footer" className="w-full   pb-20  h-3/4 xs:h-full xs:mb-20 ">
-        <div className="md:flex-row sm:flex-col ss:flex-col xs:flex-col flex  items-center justify-around px-14">
-          <div className="xs:flex xs:flex-col xs:-mb-40 ml-20 xs:ml-20 ">
-            <div className="flex-auto xs:w-screen xs:justify-start  xs:items-center ">
+      <div id="Footer" className="w-full pb-20 h-3/4 xs:h-full xs:mb-20 ">
+        <div className="md:flex-row sm:flex-col ss:flex-col xs:flex-col flex items-center justify-around ">
+          <div className="xs:flex xs:flex-col xs:-mb-40  xs:ml-20 ">
+            <div className=" xs:mt-20 xs:w-screen xs:justify-start xs:items-center ">
               <a
                 className="cursor-pointer outline-none transition duration-150 ease-in-out focus-visible:ring-2 focus-visible:ring-slate-7"
                 onClick={() => scrollToSection("Nav")}
               >
                 <img
-                  className="w-44 bg-blend-color   bg-no-repeat "
+                  className="w-44 ml-6 bg-blend-color bg-no-repeat "
                   src={Logo}
                   alt=""
                 />
               </a>
-            </div>
-            <div className="xs:mr-10  xs:w-screen xs:flex xs:justify-start xs:items-center">
-              <h2 className="dark:text-gray-300 ml-6 font-poppins mt-1  xs:-mt-8  xs:text-[18px] text-[20px] font-medium">
+              <h2 className="dark:text-gray-300 ml-6 font-poppins mt-1 xs:mt-2 xs:text-[18px] text-[25px] font-medium">
                 Rent it now!
               </h2>
-              <p className="dark:text-gray-300  ml-6 ss:text-[20px] ss:text-center  font-poppins mt-1 xs:hidden xs:text-[18px] text-[25px]">
+            </div>
+            <div className="xs:mr-10 xs:w-screen xs:flex xs:justify-start xs:items-center">
+              <p className="dark:text-gray-300 ml-6 ss:text-[20px] ss:text-center font-poppins mt-1 xs:hidden xs:text-[18px] text-[25px]">
                 Explore the city with ease. Rent a bike today!
               </p>
             </div>
           </div>
           <Zoom right>
             <img
-              src={FooterImg}
+              src={FooterImg} 
               alt="Footer Img"
-              className="rounded-2xl xs:ml-40 ml-80 "
-              height={300}
+              className="rounded-2xl lg:pl-40 xs:-mb-20 xs:ml-40"
+              height={400}
               width={450}
             />
           </Zoom>
         </div>
 
-        <div className="flex  flex-row xs:flex-col ss:ml-0 ss:px-4 xs:px-8 xs:py-3 justify-around items-center ml-4 py-6">
+        <div className="flex flex-row xs:flex-col ss:ml-0 ss:px-4 xs:px-8 xs:py-3 justify-around items-center xs:ml-4 py-6">
           {/* Contact information */}
           <div className="flex flex-col dark:text-white">
             <h1 className="font-bold font-poppins pb-2 ss:text-[18px] xs:text-[18px] text-[25px] border-yellow-200">
@@ -78,22 +78,19 @@ function Footer() {
               </li>
             </ul>
           </div>
-
           {/* Useful Links */}
           <div className="dark:text-white xs:hidden ss:hidden">
             <h1 className="font-bold font-poppins pb-2 ss:text-[14px] xs:text-[25px] text-[25px]">
               Useful Links
             </h1>
-            <ul>
-              <li className="hover:underline cursor-pointer xs:text-[13px]">
+            <ul className="flex flex-col  gap-3">
+              <li className="hover:underline cursor-pointer  xs:text-[13px]">
                 FAQ
               </li>
               <li className="hover:underline cursor-pointer xs:text-[13px]">
                 Terms and Conditions
               </li>
-              <li className="hover:underline pb-2 cursor-pointer xs:text-[13px]">
-                Fee Policy
-              </li>
+             
             </ul>
           </div>
 
@@ -106,16 +103,14 @@ function Footer() {
             <h1 className="font-bold font-poppins pb-4 ss:text-[14px] xs:text-[20px] text-[25px]">
               Useful Links
             </h1>
-            <ul className="xs:flex xs:flex-col  xs:gap-2">
+            <ul className="xs:flex xs:flex-col  xs:gap-8">
               <li className="hover:underline cursor-pointer xs:text-[17px]">
                 FAQ
               </li>
               <li className="hover:underline cursor-pointer xs:text-[17px]">
                 Terms and Conditions
               </li>
-              <li className="hover:underline cursor-pointer xs:text-[17px]">
-                Fee Policy
-              </li>
+            
             </ul>
           </div>
           <div className="flex  dark:text-white flex-col gap-4 h-[11rem] mr-10 pt-8">

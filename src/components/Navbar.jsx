@@ -2,7 +2,7 @@ import React, { useState,useEffect,useRef } from "react";
 import { CiFacebook } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa6";
 import { RiTwitterXLine } from "react-icons/ri";
-import Logo from "../assets/airyyLogo.png";
+import Logo from "../assets/logo.png";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import CallIcon from "@mui/icons-material/Call";
 import Slide from "react-reveal/Slide";
@@ -16,7 +16,7 @@ const Navbar = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const whatsappNumber = "8109475317";
+  const whatsappNumber = "9826977757";
 
   const handleRentNowClick = () => {
     const whatsappLink = `https://wa.me/${whatsappNumber}`;
@@ -228,9 +228,11 @@ const Navbar = () => {
             </ul>
             <div class="relative">
               <a
+              
                 class="outline-none  cursor-pointer focus-visible:ring-slate-7 text-sm h-10 pl-4 pr-2 gap-0 font-semibold bg-white text-black hover:bg-white/90 focus-visible:ring-4 focus-visible:ring-white/30 focus-visible:outline-none focus-visible:bg-white/90 disabled:hover:bg-white inline-flex items-center border justify-center select-none rounded-full disabled:cursor-not-allowed disabled:opacity-70 transition ease-in-out duration-200"
                 data-state="closed"
-                onClick={() => {
+                onClick={(e) => {
+                  e.stopPropagation(); 
                   setIsDropDown(!isDropDown);
                 }}
               >

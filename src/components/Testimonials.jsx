@@ -4,29 +4,48 @@ import { monials } from "../Monials";
 import Fade from "react-reveal/Fade";
 const BlockquoteComponent = ({ monial, index }) => {
   return (
-    <div className="p-10 xs:px-40 xs:py-0 xs:mb-0  keen-slider__slide  text-black flex flex-row justify-between">
-      <div className="flex flex-col  h-60   xs:ml-8 sm:justify-between">
+    <>
+      <div className="py-8 px-14 xs:hidden ss:hidden xs:px-40 xs:py-0 xs:mb-0  keen-slider__slide  text-black flex sm:flex-row sm:justify-between">
+        <div className="flex flex-col  h-60   xs:ml-8 sm:justify-between">
+          {/* text */}
+          <div className="flex flex-row w-80">
+            <span className="text-black text-[40px] font-bold font-['Judson'] leading-tight">
+              “
+            </span>
+            {/* name */}
+            <div className=" xs:text-[1rem] text-[20px] font-bold font-['Judson'] leading-tight w-80 mt-1 ml-10 ">
+              {monial.name}
+            </div>
+            {/* button */}
+          </div>
+          <div className="text-justify lg:text-2xl  overflow-clip w-44 sm:w-80 lg:w-full lg:overflow-visible lg:mb-20 mb-10 xs:mb-0">
+            {monial.Discription}
+          </div>
+        </div>
+
+        <div className="flex flex-col mt-12 ml-8  sm:ml-10 h-full justify-between">
+          {/* Image */}
+          <img className="rounded-full w-80" src={monial.image} />
+        </div>
+      </div>
+
+      <div className="flex flex-col h-60 sm:hidden text-black  keen-slider__slide px-10 sm:justify-between">
         {/* text */}
-        <div className="flex flex-row w-80">
-          <span className="text-black text-[40px] font-bold font-['Judson'] leading-tight">
+        <div className="flex flex-row ">
+          <span className=" text-[40px] font-bold font-['Judson'] leading-tight">
             “
           </span>
           {/* name */}
-          <div className=" xs:text-[1rem] text-[20px] font-bold font-['Judson'] leading-tight w-80 mt-1 ml-10 ">
+          <div className=" xs:text-[1rem] text-[20px] font-bold font-['Judson'] leading-tight     mt-2 ml-10 ">
             {monial.name}
           </div>
           {/* button */}
         </div>
-        <div className="text-justify lg:text-2xl overflow-clip w-44 sm:w-80 lg:w-full lg:overflow-visible lg:mb-20 mb-10 xs:mb-0">
+        <div className="text-justify lg:text-2xl  overflow-clip w-60">
           {monial.Discription}
         </div>
       </div>
-
-      <div className="flex flex-col mt-12 ml-8 sm:ml-10 h-full justify-between">
-        {/* Image */}
-        <img className="rounded-full w-80" src={monial.image} />
-      </div>
-    </div>
+    </>
   );
 };
 
@@ -148,45 +167,50 @@ const Testimonials = () => {
 
   return (
     <>
+      {" "}
+      <link
+        href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
+        rel="stylesheet"
+      />
+      <div className="relative  top-[50vh] left-[30vw] right-0  xs:-top-16 xs:-left-[10rem]   -z-9 h-[370px] xs:h-[330px] w-full">
+        <svg
+          className="absolute "
+          width="1132"
+          height="832"
+          viewBox="0 0 1422 832"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1703.06 203.649C1780.49 502.793 1664.93 791.459 1444.94 848.402C1224.95 905.345 82.0719 713.38 4.63986 414.236C-72.7922 115.091 944.542 -177.952 1164.53 -234.896C1384.52 -291.839 1625.63 -95.4956 1703.06 203.649Z"
+            fill="url(#paint0_linear_65_327)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_65_327"
+              x1="1164.53"
+              y1="-234.895"
+              x2="1444.94"
+              y2="848.402"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FFD600" />
+              <stop offset="0.878674" stop-color="#0A0A09" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
       <div
         id="Testimonials"
-        className="Testimonials h-screen  snap-center xs:snap-start snap-mandatory flex flex-row  xs:flex-col justify-between items-center px-40 pt-40  xs:px-0   xs:py-[4.5rem] "
+        className="h-screen  snap-center xs:snap-start snap-mandatory flex xl:flex-row  xs:flex-col ss:flex-col sm:flex-col  
+    gap-10 items-start xl:justify-between xl:ml-0 lg:ml-20 px-20  pt-40  xs:px-10   xs:py-[4.5rem] "
       >
-        <div className="relative  -top-[15rem] left-60 right-0  xs:-top-16 xs:-left-[10rem]   -z-9 h-[370px] xs:h-[330px] w-full">
-          <svg
-            className="absolute "
-            width="1132"
-            height="832"
-            viewBox="0 0 1422 832"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1703.06 203.649C1780.49 502.793 1664.93 791.459 1444.94 848.402C1224.95 905.345 82.0719 713.38 4.63986 414.236C-72.7922 115.091 944.542 -177.952 1164.53 -234.896C1384.52 -291.839 1625.63 -95.4956 1703.06 203.649Z"
-              fill="url(#paint0_linear_65_327)"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_65_327"
-                x1="1164.53"
-                y1="-234.895"
-                x2="1444.94"
-                y2="848.402"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#FFD600" />
-                <stop offset="0.878674" stop-color="#0A0A09" stop-opacity="0" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-
         {/* text */}
         <Fade left>
-          <div className="flex relative right-72  xs:right-2 xs:bottom-56 bottom-40 ">
+          <div className="xl:mt-20   sm:-mt-40">
             <div className="dark:text-white    font-poppins">
               <div className="flex flex-col font-poppins">
-                <span className="xl:-left-24   text-[32px] font-poppins">
+                <span className="  text-[32px] font-poppins">
                   What Our Riders Say.
                 </span>
               </div>
@@ -202,14 +226,9 @@ const Testimonials = () => {
         </Fade>
         {/* Card */}
 
-        <link
-          href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
-          rel="stylesheet"
-        />
-
-        <div className="flex-col   z-[100]">
+        <div className="z-[100]">
           <Fade right>
-            <div className="w-[42rem] xs:w-[20rem] -mt-20  xs:h-[20rem] bg-white rounded-[4rem] xs:rounded-[2rem]">
+            <div className="xl:w-[42vw] lg:w-[70vw] lg:h-[50vh]  lg:mt-12  xs:mt-16 xl:h-[44vh]  xl:mt-0 xs:w-[20rem] xs:h-[16rem] bg-white rounded-[4rem] xs:rounded-[2rem]">
               <div id="keen-slider" ref={sliderRef} className="keen-slider  ">
                 {/* Your card content goes here */}
                 {monials.map((monial, index) => (

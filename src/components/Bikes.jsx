@@ -4,6 +4,7 @@ import Img2 from "../assets/bikeImg4.png";
 import Img3 from "../assets/bikeImg3.png";
 import Img4 from "../assets/bikeImg2.png";
 import Img5 from "../assets/bikeImg1.png";
+import { FaUserFriends } from "react-icons/fa";
 import pin from "../assets/Pin.png";
 import earth from "../assets/earth.png"
 
@@ -17,14 +18,14 @@ const Bikes = () => {
   const [isHoveredBox5, setIsHoveredBox5] = useState(false);
   const [isHoveredBox6, setIsHoveredBox6] = useState(false);
   return (
-    <div className="h-screen xs:py-[15px] xs:mt-24 xs:w-full bg-gradient-to-t from-black   via-yellow-400 to-black rounded-3xl bg-center snap-center xs:snap-center items-center justify-center flex flex-col xs:m-0 py-[15px]">
-      <h1 className="text-center  xs:w-[300px] xs:text-[18px] font-poppins text-[30px] font-bold text-white w-[600px]  rounded-2xl py-2">
-        The Benefits of Riding with Us
-      </h1>
-      <div
-        id="Bikes"
-        className="grid xs:grid-cols-2  xl:w-screen xl:ml-48 grid-cols-3 gap-20 xs:gap-10 xs:m-[5px]   py-16"
-      >
+    <div className="h-screen flex items-center justify-center snap-center flex-col bg-gradient-to-t from-black via-yellow-400 to-black rounded-3xl">
+    <div className="text-center w-screen  text-white font-poppins text-[30px] font-bold rounded-2xl py-2 px-10 mt-10 xs:-mt-10   ">
+      The Benefits of Riding with Us
+    </div>
+    <div
+      id="Bikes"
+      className="grid xs:grid-cols-2 grid-cols-3 lg:gap-x-20 sm:gap-x-10 xl:gap-x-40 gap-y-20 xs:gap-10 xs:m-[5px] py-16"
+    >
         <div
           class="relative  bg-gradient-to-r from-yellow-400 to-yellow-300   border  border-black shadow-2xl rounded-2xl xs:w-[150px] xs:h-[180px] w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox1(true)}
@@ -249,10 +250,9 @@ const Bikes = () => {
                     Click me
                   </p>
                    <Fade bottom>
-                  <img
-                    className="absolute top-[-40px] xs:left-[-80px] left-[-20px] right-[30px] w-[70px] h-[70px]"
-                    src={Img5}
-                    alt="Placeholder Image 2"
+           
+                  <FaUserFriends
+                   className="absolute top-[-40px] xs:left-[-80px] left-[-20px] right-[30px] w-[70px] h-[70px]"
                   />
                     </Fade>
                 </div>
@@ -284,8 +284,7 @@ const Bikes = () => {
               <Fade bottom>
                 <div className="absolute top-[-40px] xs:left-[-100px] left-[-70px]">
                   <p className=" text-start xs:text-[12px] xs:w-[110px] w-[170px] text-black font-poppins font-bold">
-                    Our Electric Bikes boast a 50 km range, ideal for economical
-                    short rides .
+                  Our team embodies a friendly and cooperative spirit which creates a positive environment for everyone.
                   </p>
                 </div>
               </Fade>
@@ -298,7 +297,7 @@ const Bikes = () => {
                    <Fade bottom>
                   <img
                     className="absolute  xs:left-[-80px] top-[-40px] left-[-20px] right-[30px] w-[70px] h-[70px]"
-                    src={Img5}
+                    src={Img1}
                     alt="Placeholder Image 2"
                   />
                    </Fade>

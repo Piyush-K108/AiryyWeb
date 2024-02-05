@@ -20,9 +20,9 @@ const App = () => {
      
       <Navbar />
       <Hero />
-      
-      <Services />
       <About /> 
+      <Services />
+   
       <Bikes />
       <Testimonials />
     

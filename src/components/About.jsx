@@ -22,7 +22,7 @@ const About = () => {
           >
             <Fade right>
               <img
-                className="-mt-14"
+                className="-mt-44"
                 src="https://file.rendit.io/n/rH5LwF78dqiwZ10YKfVp.png"
                 alt="Vecteezypeopleworkingandmeetingillustration"
               />
@@ -42,7 +42,7 @@ const About = () => {
                 we're dedicated to creating unforgettable experiences.Our
                 commitment to sustainable urban mobility fuels our mission
                 tooffer a diverse fleet of meticulously maintained bikes,
-                ensuring that every AiRYY ride is not only smooth and safe but
+                ensuring that  AiRYY ride is not only smooth and safe but
                 also packed with adventure. Visit us at Bhawarkua, Indore, and
                 embark on a journey with AiRYY that transforms your commute into
                 a memorable adventure. Get ready to explore the city with ease,
@@ -76,7 +76,7 @@ const About = () => {
             Welcome to AiRYY Rides, where we go beyond just providing bikes;
             we're dedicated to creating unforgettable experiences.Our commitment
             to sustainable urban mobility fuels our mission tooffer a diverse
-            fleet of meticulously maintained bikes, ensuring that every AiRYY
+            fleet of meticulously maintained bikes, ensuring that  AiRYY
             ride is not only smooth and safe but also packed with adventure.
             Visit us at Bhawarkua, Indore, and embark on a journey with AiRYY
             that transforms your commute into a memorable adventure. Get ready

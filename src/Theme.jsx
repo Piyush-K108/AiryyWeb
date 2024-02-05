@@ -9,8 +9,11 @@ const Theme = () => {
   }, []);
 
   const scrollToSection = (sectionId) => {
-    const scrollPosition = window.scrollY;
-    console.log(scrollPosition);
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (

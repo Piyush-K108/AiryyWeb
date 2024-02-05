@@ -1,7 +1,7 @@
 import React,{useRef} from "react";
 import { motion,useInView } from "framer-motion";
 const Services = () => {
-  const whatsappNumber = "8109475317"; 
+  const whatsappNumber = "9826977757"; 
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
   const handleRentNowClick = () => {
@@ -14,12 +14,12 @@ const Services = () => {
       <div
         ref={ref}
         id="Services"
-        className="Services  snap-center xs:snap-start   z-[10] top-5 h-screen  relative xs:w-full"
+        className="Services  snap-center xs:snap-end   z-[10] mt-16 h-screen  relative xs:w-full"
       >
         {/* Parent container with opacity */}
 
         {/* Heading outside the parent container with opacity */}
-        <h1 className=" dark:text-white  text-center font-poppins xs:text-[25px]  ss:text-[20px] text-[35px] font-bold mb-4 xs:pt-16 md:mb-0 md:col-span-3">
+        <h1 className=" dark:text-white  text-center font-poppins xs:text-[25px]  ss:text-[20px] text-[35px] font-bold mb-4 xs:pt-20 md:mb-0 md:col-span-3">
           Why Choose AiRYY Rides?
         </h1>
 
@@ -31,8 +31,8 @@ const Services = () => {
                 24/7 Service
               </div>
               <div className="flex-col justify-center items-center gap-[45px] flex ">
-                <div className="w-[162px] font-poppins xs:h-[50px] h-[73px] text-black group-hover:text-white  text-base font-normal px-3 leading-6 text-justify xs:text-[11px] xs:ml-2 xs:mr-2">
-                  24/7 Service: We are at your service 24/7, ensuring you can
+                <div className="w-[178px] font-poppins xs:h-[50px] h-[73px] text-black group-hover:text-white  text-base font-normal px-3 leading-6 text-start xs:text-[11px] xs:ml-2 xs:mr-2">
+                  We are at your service 24/7, ensuring you can
                   embark on your adventure day or night.
                 </div>
                 <div className="px-2 py-2 bg-black rounded-md xs:py-1 xs:mt-3 mt-8 border border-slate-50 justify-start items-start gap-2 inline-flex group-hover:bg-white transition-all duration-300">
@@ -172,7 +172,7 @@ const Services = () => {
             <div className="flex-col justify-center items-center gap-[35px] flex">
               <div className=" w-[262px] h-[73px] group-hover:text-white text-black text-base font-normal font-poppins px-5  leading-5 text-justify xs:px-16 xs:text-[10px]">
                 Prioritizing safety, our bikes undergo regular maintenance to
-                guarantee a secure and worry-free riding experience.
+                guarantee a secure and easy going riding experience.
               </div>
               <div className="px-4 py-2.5 rounded-[10px] justify-start items-start gap-2 inline-flex"></div>
             </div>
@@ -201,7 +201,7 @@ const Services = () => {
             </div>
             <div className="flex-col justify-center items-center gap-[35px] flex">
               <div className="w-[262px] h-[73px] group-hover:text-white text-black text-base font-normal font-poppins px-7  leading-5 text-justify xs:px-16 xs:text-[10px]">
-                Easy Booking: Hassle-free online and offline booking with
+               Hassle-free online and offline booking with
                 flexible rental options.
               </div>
               <div className="px-4 py-2.5 rounded-[10px]justify-start items-start gap-2 inline-flex"></div>
@@ -210,9 +210,10 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="w-full -z-9 h-[750px] relative bg-gradient-to-b  from-yellow-400 via-transparent to-transparent rounded-3xl flex items-center justify-right xs:-top-[820px] -top-[720px] ">
+      <div className="w-full -z-9 h-[750px] relative bg-gradient-to-b  from-yellow-400 via-transparent to-transparent rounded-3xl flex items-center justify-right xs:-top-[720px] -top-[720px] ">
         {/* This container has opacity, and the heading is outside it */}
       </div>
+      
       {/* </Fade> */}
     </>
   );

@@ -4,7 +4,7 @@ import { frame, motion } from "framer-motion";
 
 const Hero = () => {
 
-  const whatsappNumber = "8109475317"; // Replace with your actual WhatsApp number
+  const whatsappNumber = "9826977757"; // Replace with your actual WhatsApp number
 
   const handleRentNowClick = () => {
     const whatsappLink = `https://wa.me/${whatsappNumber}`;
@@ -19,16 +19,11 @@ const Hero = () => {
           <motion.span className="text-yellow-500 xs:text-5xl ss:text-5xl  sm:text-6xl   font-medium font-poppins uppercase leading-[48px] tracking-[2.88px]">
           AiRYY Rides
           </motion.span>
-
-          <motion.span className="text-yellow-400 text-opacity-80 xs:text-5xl ss:text-5xl  sm:text-6xl   font-medium font-poppins uppercase leading-[48px] tracking-[2.88px]">
-            !<br />
-          </motion.span>
+          <br/>
           <motion.span className="dark:text-white xs:text-2xl ss:text-3xl sm:text-4xl  font-medium font-poppins uppercase leading-[48px] tracking-widest">
-          Rent, Return, Repeat
+          Rent Return Repeat
           </motion.span>
-          <motion.span className="text-white text-[45px] font-medium font-['Fredoka'] capitalize leading-[48px] tracking-[5.40px]">
-            .
-          </motion.span>
+
         </div>
 
         <div className=" max-w-1 cursor-pointer sm:hidden relative top-[280px] z-full  z-10">
@@ -41,20 +36,21 @@ const Hero = () => {
       </div>
 
       {/* Screen */}
-      <div className=" xs:hidden ss:hidden h-[135px] left-[46px]  lg:left-[90px]  top-[344px] lg:top-[154px] z-20 absolute">
+      <div className=" xs:hidden text-3xl ss:hidden h-[135px] left-[46px]  lg:left-[90px]  top-[344px] lg:top-[154px] z-20 absolute">
         <div className="w-[483.30px] text-yellow-500 left-0 top-0 absolute text-[54px] font-medium font-poppins uppercase tracking-[6.48px]">
-          AiRYY Rides!
+          AiRYY Rides
         </div>
-        <div className="w-[565px] dark:text-white left-0 top-[112px] absolute text-[37px] font-medium font-poppins uppercase leading-[23px] tracking-[4.44px]">
-          Rent, Return, Repeat.
+        <br/>
+        <div className="w-[565px] text-xl dark:text-white left-0 top-[92px] absolute text-[37px] font-medium font-poppins uppercase leading-[0px] tracking-[4.44px]">
+          Rent Return Repeat
         </div>
       </div>
 
-      <div className="xs:hidden ss:hidden w-[595px] h-[49px] left-[46px]  md:left-[45px]  lg:left-[90px] top-[539px] lg:top-[339px] z-20 absolute dark:text-white text-[19px] font-semibold font-poppins leading-[18px]">
+      <div className="xs:hidden ss:hidden w-[595px] h-[49px] left-[46px]  md:left-[45px]  lg:left-[90px] top-[539px] lg:top-[309px] z-20 absolute dark:text-white text-[19px] font-semibold font-poppins leading-[18px]">
         Your journey, your vehicle – experience travel like never before.
         <br />
       </div>
-      <div className="xs:hidden cursor-pointer ss:hidden px-4 py-2.5  left-[46px]  md:left-[45px]  lg:left-[90px] top-[627px] lg:top-[427px] absolute z-20 rounded-[10px] border-2 border-yellow-500 justify-start items-start gap-2 inline-flex">
+      <div className="xs:hidden cursor-pointer ss:hidden px-4 py-2.5  left-[46px]  md:left-[45px]  lg:left-[90px] top-[627px] lg:top-[390px] absolute z-20 rounded-[10px] border-2 border-yellow-500 justify-start items-start gap-2 inline-flex">
         <a
           onClick={handleRentNowClick}
           className="text-yellow-400 text-[15px] font-semibold font-['Inter'] leading-[18px]"
