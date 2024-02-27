@@ -31,20 +31,20 @@ const Contact = () => {
     >
       <div
         id="Desktop"
-        className="xs:flex xs:flex-col overflow-hidden relative flex   flex-row justify-between w-full font-poppins items-start"
+        className="xs:flex xs:flex-col overflow-hidden relative flex   flex-row w-full font-poppins items-start"
       >
         <div
           id="Ellipse1"
-          className="xs:w-[530px] xs:ml-6  xs:flex xs:flex-col bg-[linear-gradient(73deg,_rgba(17,_16,_15,_0.3)_13%,rgba(238,_200,_0,_0)_82%)] bg-cover bg-50%_50% bg-blend-normal bg-no-repeat relative flex flex-col xs:gap-6 gap-10 w-3/5 h-[1017px] items-start xs:mt-[-163px] mt-[-92px] xs:mb-[-192px]   mb-[-92px] pt-56 xs:pb-[229px] pb-[269px]   rounded-[50%]"
+          className="xs:w-[530px]  xs:ml-[-223px] xs:flex xs:flex-col bg-[linear-gradient(73deg,_rgba(17,_16,_15,_0.3)_13%,rgba(238,_200,_0,_0)_82%)] bg-cover bg-50%_50% bg-blend-normal bg-no-repeat relative flex flex-col gap-16 w-3/5 h-[1017px] items-start xs:mt-[-163px] mt-[-92px] xs:mb-[-192px]   mb-[-92px] ml-[-163px] pt-56 xs:pb-[229px] pb-[269px]   pl-48 rounded-[50%]"
         >
-          <div className="xs:justify-start xs:items-start flex flex-col xs:gap-2 gap-5 w-3/5 font-poppins  mb-1 ml-20 xs:ml-0  xs:w-full">
+          <div className="xs:justify-start xs:items-start flex flex-col gap-5 w-3/5 font-poppins items-start mb-1 ml-48 xs:ml-14 xs:w-full">
             <div
               id="GetInTouch"
               className="xs:flex xs:justify-start xs:items-start xs:text-xl text-3xl font-poppins tracking-[6.48] uppercase dark:text-white "
             >
               <p className="xs:ml-2">Get in Touch</p>
             </div>
-            <div className="xs:text-[12px] xs:mr-0 xs:px-2  xs:flex xs:justify-start xs:items-start text-justify xs:w-3/4 text-xl font-poppins font-medium  dark:text-[#d3d0d0]">
+            <div className="xs:text-[12px] xs:mr-0 xs:px-2  xs:flex xs:justify-start xs:items-start text-justify w-full text-xl font-poppins font-medium  dark:text-[#d3d0d0]">
               <p className="xs:text-justify">
                 Have questions or need assistance? We are here to help. Contact
                 our friendly team at AiRYY Rides for any inquiries, support or
@@ -52,25 +52,25 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <div className="">
-            <span className="block font-poppins xs:text-[12px] ml-20  sm:text-[18px]  xs:ml-2 dark:text-white font-medium uppercase">
+          <div className="relative z-[1001] xs:h-20  xs:p-3 xs:top-[-60px] xs:left-[50px] left-48">
+            <span className="block font-poppins xs:text-[12px]  sm:text-[18px]  xs:ml-2 dark:text-white font-medium uppercase">
               Click on Map to Reach the Pickup location.
             </span>
             <iframe
-              className="xs:w-80 sm:hidden h-40 w-full  rounded-[2rem]"
+              className="xs:w-80 sm:hidden h-40 w-full rounded-[2rem]"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.467957738305!2d75.86182427385859!3d22.687931523086643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd038adfe389%3A0x2aa0548bdd308fea!2sAiRYY%20Rides!5e0!3m2!1sen!2sin!4v1704033687769!5m2!1sen!2sin"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
              <iframe
-              className="xs:w-80 xs:hidden ss:hidden h-72 ml-20 w-full rounded-[2rem]"
+              className="xs:w-80 xs:hidden ss:hidden h-72 w-full rounded-[2rem]"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.467957738305!2d75.86182427385859!3d22.687931523086643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd038adfe389%3A0x2aa0548bdd308fea!2sAiRYY%20Rides!5e0!3m2!1sen!2sin!4v1704033687769!5m2!1sen!2sin"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-            <div className="xs:ml-5 flex dark:text-white ml-20 flex-row gap-3 mt-6 ">
+            <div className="xs:ml-5 flex dark:text-white  flex-row gap-3 mt-6 ">
               <a href="https://www.linkedin.com/company/airyy-rides/">
                 <CiLinkedin className="cursor-pointer xs:text-[20px] text-[35px]" />
               </a>

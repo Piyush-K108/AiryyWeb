@@ -34,6 +34,7 @@ body {
   border-radius: 9999px;
   position: relative;
 }
+
 .loader {
   height: 100vh;
   width: 100%;

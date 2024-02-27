@@ -1,7 +1,7 @@
-import React, { useState,useEffect,useRef } from "react";
-import { CiFacebook } from "react-icons/ci";
+import React, { useState, useEffect, useRef } from "react";
+import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa6";
-import { RiTwitterXLine } from "react-icons/ri";
+import { FaFacebook } from "react-icons/fa";
 import Logo from "../assets/logo.png";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import CallIcon from "@mui/icons-material/Call";
@@ -22,19 +22,7 @@ const Navbar = () => {
     const whatsappLink = `https://wa.me/${whatsappNumber}`;
     window.location.href = whatsappLink;
   };
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropDown(false);
-      }
-    };
 
-    document.addEventListener('click', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, []);
   const [MobileMenu, setMobileMenu] = useState(false);
   return (
     <div id="Nav" className=" ">
@@ -148,15 +136,22 @@ const Navbar = () => {
                     </p>
 
                     <div className="border-y-2 mt-4 gap-0 border-yellow-400 " />
-                    <CiFacebook size={25} />
-                    <RiTwitterXLine
-                      className="cursor-pointer mt-[0.06rem]"
-                      size={24}
-                    />
-                    <FaInstagram
-                      className="cursor-pointer mt-[0.06rem]"
-                      size={24}
-                    />
+
+                    <a href="https://www.linkedin.com/company/airyy-rides/">
+                      <CiLinkedin className="cursor-pointer" size={25} />
+                    </a>
+                    <a href="https://www.facebook.com/airyyrides">
+                      <FaFacebook
+                        className="cursor-pointer mt-[0.06rem]"
+                        size={24}
+                      />
+                    </a>
+                    <a href="https://www.instagram.com/airyyrides?igsh=MWF1ZzZva2hscTRzYQ==">
+                      <FaInstagram
+                        className="cursor-pointer mt-[0.06rem]"
+                        size={24}
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -176,7 +171,7 @@ const Navbar = () => {
                   onClick={() => scrollToSection("Hero")}
                 >
                   <img
-                    className="w-24 bg-blend-color bg-no-repeat"
+                    className="w-56 -ml-14 bg-blend-color bg-no-repeat"
                     src={Logo}
                     alt=""
                   />
@@ -226,18 +221,21 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-            <div class="relative">
+            <div
+              tabIndex={0} // Make the div focusable
+              onBlur={() => setIsDropDown(false)}
+              className="relative"
+            >
               <a
-              
-                class="outline-none  cursor-pointer focus-visible:ring-slate-7 text-sm h-10 pl-4 pr-2 gap-0 font-semibold bg-white text-black hover:bg-white/90 focus-visible:ring-4 focus-visible:ring-white/30 focus-visible:outline-none focus-visible:bg-white/90 disabled:hover:bg-white inline-flex items-center border justify-center select-none rounded-full disabled:cursor-not-allowed disabled:opacity-70 transition ease-in-out duration-200"
+                className="outline-none cursor-pointer focus-visible:ring-slate-7 text-sm h-10 pl-4 pr-2 gap-0 font-semibold bg-white text-black hover:bg-white/90 focus-visible:ring-4 focus-visible:ring-white/30 focus-visible:outline-none focus-visible:bg-white/90 disabled:hover:bg-white inline-flex items-center border justify-center select-none rounded-full disabled:cursor-not-allowed disabled:opacity-70 transition ease-in-out duration-200"
                 data-state="closed"
                 onClick={(e) => {
-                  e.stopPropagation(); 
+                  e.stopPropagation();
                   setIsDropDown(!isDropDown);
                 }}
               >
                 Contact Now
-                <span class="text-[#70757E]">
+                <span className="text-[#70757E]">
                   <svg
                     fill="none"
                     height="24"
@@ -248,20 +246,23 @@ const Navbar = () => {
                     <path
                       d="M10.75 8.75L14.25 12L10.75 15.25"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
                     ></path>
                   </svg>
                 </span>
               </a>
               {isDropDown && (
                 <Slide right>
-                  <div  ref={dropdownRef} className="absolute top-full  mt-2 bg-white rounded-xl w-[150px] shadow-xl py-4 px-[15px]">
+                  <div
+                    ref={dropdownRef}
+                    className="absolute top-full mt-2 bg-white rounded-xl w-[150px] shadow-xl py-4 px-[15px]"
+                  >
                     <ul className="flex flex-col">
                       <li
                         className="text-black mb-4 hover:underline cursor-pointer"
-                        onClick={{ handleRentNowClick }}
+                        onClick={handleRentNowClick}
                       >
                         <WhatsAppIcon
                           className="text-green-700 font-bold text-[20px] mr-4"
@@ -280,7 +281,7 @@ const Navbar = () => {
                   </div>
                 </Slide>
               )}
-            </div>
+            </div>{" "}
           </div>
         </div>
       </header>

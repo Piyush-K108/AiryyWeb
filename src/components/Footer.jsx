@@ -4,9 +4,10 @@ import Zoom from "react-reveal/Zoom";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import AttachEmailOutlinedIcon from "@mui/icons-material/AttachEmailOutlined";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
-import { CiFacebook } from "react-icons/ci";
+import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa6";
-import { RiTwitterXLine } from "react-icons/ri";
+import { FaFacebook } from "react-icons/fa";
+
 import Logo from "../assets/logo.png";
 
 const currentYear = new Date().getFullYear();
@@ -39,9 +40,9 @@ function Footer() {
               </p>
             </div>
           </div>
-          <Zoom right>
+          <Zoom right>  
             <img
-              src={FooterImg} 
+              src={FooterImg}
               alt="Footer Img"
               className="rounded-2xl lg:pl-40 xs:-mb-20 xs:ml-40"
               height={400}
@@ -50,13 +51,14 @@ function Footer() {
           </Zoom>
         </div>
 
-        <div className="flex flex-row xs:flex-col ss:ml-0 ss:px-4 xs:px-8 xs:py-3 justify-around items-center xs:ml-4 py-6">
+        <div className="flex flex-row xs:flex-col ss:ml-0 ss:px-4 xs:px-8 xs:py-3 justify-around items-center xs:ml-4 py-4">
           {/* Contact information */}
-          <div className="flex flex-col dark:text-white">
+          <div className="flex flex-col -mb-4 dark:text-white">
             <h1 className="font-bold font-poppins pb-2 ss:text-[18px] xs:text-[18px] text-[25px] border-yellow-200">
-              Contact US
+              Contact Us
             </h1>
-            <ul className="xs:flex xs:flex-col xs:gap-2">
+
+            <ul className="flex flex-col mt-2 -ml-2 -mr-4 gap-4 ">
               <li className="dark:text-white">
                 <PhoneInTalkOutlinedIcon className="text-yellow-400" />{" "}
                 <a href="tel:9826977757">9826977757</a>
@@ -66,15 +68,17 @@ function Footer() {
                 <a href="mailto:airyyrides@gmail.com">airyyrides@gmail.com</a>
               </li>
               <li className="dark:text-white">
-                <PlaceOutlinedIcon className="text-yellow-400" />{" "}
-                <a
-                  href="https://www.google.com/maps/place/AiRYY+Rides/@22.6881198,75.8581969,17z/data=!3m1!4b1!4m6!3m5!1s0x3962fd038adfe389:0x2aa0548bdd308fea!8m2!3d22.6881149!4d75.8630678!16s%2Fg%2F11stj9kj6g?entry=ttu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  160/4, Bholaram Ustad Marg, Indrapuri Colony, Bhanwar Kuwa,
-                  Indore, Madhya Pradesh 452001
-                </a>
+                <div className="flex flex-row gap-1">
+                  <PlaceOutlinedIcon className="text-yellow-400" />{" "}
+                  <a
+                    href="https://www.google.com/maps/place/AiRYY+Rides/@22.6881198,75.8581969,17z/data=!3m1!4b1!4m6!3m5!1s0x3962fd038adfe389:0x2aa0548bdd308fea!8m2!3d22.6881149!4d75.8630678!16s%2Fg%2F11stj9kj6g?entry=ttu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    160/4, Bholaram Ustad Marg, Indrapuri Colony, Bhanwar Kuwa,
+                    Indore, Madhya Pradesh 452001
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
@@ -90,7 +94,6 @@ function Footer() {
               <li className="hover:underline cursor-pointer xs:text-[13px]">
                 Terms and Conditions
               </li>
-             
             </ul>
           </div>
 
@@ -99,25 +102,30 @@ function Footer() {
 
         {/* Useful Links for smaller screens with image */}
         <div className="flex flex-row  sm:hidden">
-          <div className="dark:text-white flex flex-col w-screen ml-[2.8rem] mt-10 justify-start">
-            <h1 className="font-bold font-poppins pb-4 ss:text-[14px] xs:text-[20px] text-[25px]">
+          <div className="dark:text-white flex flex-col w-screen ml-[2.8rem] mt-14 justify-start">
+            <h1 className="font-bold font-poppins pb-2 ss:text-[14px] xs:text-[20px] text-[25px]">
               Useful Links
             </h1>
-            <ul className="xs:flex xs:flex-col  xs:gap-8">
+            <ul className="xs:flex xs:flex-col  xs:gap-4">
               <li className="hover:underline cursor-pointer xs:text-[17px]">
                 FAQ
               </li>
               <li className="hover:underline cursor-pointer xs:text-[17px]">
                 Terms and Conditions
               </li>
-            
             </ul>
           </div>
           <div className="flex  dark:text-white flex-col gap-4 h-[11rem] mr-10 pt-8">
             <div className="border-y-2 mt-4 border-yellow-400 " />
-            <CiFacebook size={35} />
-            <RiTwitterXLine className="cursor-pointer mt-[0.06rem]" size={28} />
-            <FaInstagram className="cursor-pointer mt-[0.06rem]" size={28} />
+            <a href="https://www.linkedin.com/company/airyy-rides/">
+              <CiLinkedin className="cursor-pointer" size={28} />
+            </a>
+            <a href="https://www.facebook.com/airyyrides">
+              <FaFacebook className="cursor-pointer mt-[0.06rem]" size={24} />
+            </a>
+            <a href="https://www.instagram.com/airyyrides?igsh=MWF1ZzZva2hscTRzYQ==">
+              <FaInstagram className="cursor-pointer mt-[0.06rem]" size={24} />
+            </a>
           </div>
         </div>
       </div>
@@ -129,14 +137,20 @@ function Footer() {
           airyyrides.com
         </p>
         {/* Social Links for larger screens */}
-        <div className="flex xs:hidden ss:hidden dark:text-white  flex-row gap-4 h-[5rem] ">
-          <CiFacebook size={28} />
-          <RiTwitterXLine className="cursor-pointer mt-[0.06rem]" size={28} />
-          <FaInstagram className="cursor-pointer mt-[0.06rem]" size={28} />
+        <div className="flex xs:hidden  ss:hidden dark:text-white  flex-row gap-4 h-[5rem] ">
+          <a href="https://www.linkedin.com/company/airyy-rides/">
+            <CiLinkedin className="cursor-pointer" size={33} />
+          </a>
+          <a href="https://www.facebook.com/airyyrides">
+            <FaFacebook className="cursor-pointer mt-[0.06rem]" size={28} />
+          </a>
+          <a href="https://www.instagram.com/airyyrides?igsh=MWF1ZzZva2hscTRzYQ==">
+            <FaInstagram className="cursor-pointer mt-[0.06rem]" size={28} />
+          </a>
         </div>
       </div>
 
-      <div className="w-screen -mt-20 justify-center pb-6 flex sm:hidden  text-white">
+      <div className="w-screen -mt-10 justify-center pb-20 flex sm:hidden  text-white">
         <p>
           <span className="text-yellow-400">&copy;</span> {currentYear}{" "}
           airyyrides.com

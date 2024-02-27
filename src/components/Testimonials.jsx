@@ -4,8 +4,8 @@ import { monials } from "../Monials";
 import Fade from "react-reveal/Fade";
 const BlockquoteComponent = ({ monial, index }) => {
   return (
-    <>
-      <div className="py-8 px-14 xs:hidden ss:hidden xs:px-40 xs:py-0 xs:mb-0  keen-slider__slide  text-black flex sm:flex-row sm:justify-between">
+   
+      <div className="py-8 px-14 xs:hidden ss:hidden xs:px-40 xs:py-0 xs:mb-0  keen-slider__slide text-black flex sm:flex-row sm:justify-between">
         <div className="flex flex-col  h-60   xs:ml-8 sm:justify-between">
           {/* text */}
           <div className="flex flex-row w-80">
@@ -29,6 +29,12 @@ const BlockquoteComponent = ({ monial, index }) => {
         </div>
       </div>
 
+      
+  );
+};
+const BlockquoteComponentmobile = ({ monial, index }) => {
+  return (
+  
       <div className="flex flex-col h-60 sm:hidden text-black  keen-slider__slide px-10 sm:justify-between">
         {/* text */}
         <div className="flex flex-row ">
@@ -45,13 +51,13 @@ const BlockquoteComponent = ({ monial, index }) => {
           {monial.Discription}
         </div>
       </div>
-    </>
+  
   );
 };
-
 const Testimonials = () => {
   const [animationDuration, setAnimationDuration] = useState(50000);
   const sliderRef = useRef(null);
+  const sliderRef2 = useRef(null);
 
   // Function to handle intersection observer callback
   const handleIntersection = (entries) => {
@@ -72,6 +78,7 @@ const Testimonials = () => {
 
     // Observing the slider element
     observer.observe(sliderRef.current);
+    observer.observe(sliderRef2.current);
 
     // Cleanup function to disconnect the observer when the component unmounts
     return () => {
@@ -79,7 +86,7 @@ const Testimonials = () => {
     };
   }, []);
   useEffect(() => {
-    if (sliderRef.current) {
+    if (sliderRef.current && sliderRef2.current) {
       const animation = { duration: animationDuration, easing: (t) => t };
       const keenSlider = new KeenSlider("#keen-slider", {
         loop: true,
@@ -165,6 +172,93 @@ const Testimonials = () => {
     }
   }, [animationDuration, sliderRef]);
 
+  useEffect(() => {
+    if (sliderRef2.current) {
+      const animation = { duration: animationDuration, easing: (t) => t };
+      const keenSlider = new KeenSlider("#keen-slider2", {
+        loop: true,
+
+        renderMode: "performance",
+        drag: true,
+
+        created(s) {
+          s.moveToIdx(5, true, animation);
+        },
+
+        updated(s) {
+          s.moveToIdx(s.track.details.abs + 5, true, animation);
+        },
+        animationEnded(s) {
+          s.moveToIdx(s.track.details.abs + 5, true, animation);
+        },
+        dragStart(s) {
+          // Pause the slider animation when dragging starts
+          s.pause();
+        },
+        dragEnd(s) {
+          // Resume the slider animation when dragging ends
+          s.unpause();
+          // Ensure the slider is in the correct position after dragging ends
+          const slideIndex = Math.round(
+            s.details().progressNormalized * (s.details().size - 1)
+          );
+          s.moveToSlide(slideIndex);
+        },
+        slides: {
+          origin: "center",
+          perView: 1,
+          spacing: 16,
+        },
+        breakpoints: {
+          "(min-width: 400px)": {
+            slides: {
+              origin: "auto",
+              perView: 1,
+              spacing: 32,
+            },
+          },
+          "(min-width: 700px)": {
+            slides: {
+              origin: "auto",
+              perView: 1,
+              spacing: 32,
+            },
+          },
+          "(min-width: 1024px)": {
+            slides: {
+              origin: "auto",
+              perView: 1,
+              spacing: 32,
+            },
+          },
+        },
+      });
+
+      const keenSliderPrevious = document.getElementById(
+        "keen-slider-previous"
+      );
+      const keenSliderNext = document.getElementById("keen-slider-next");
+
+      const keenSliderPreviousDesktop = document.getElementById(
+        "keen-slider-previous-desktop"
+      );
+      const keenSliderNextDesktop = document.getElementById(
+        "keen-slider-next-desktop"
+      );
+
+      keenSliderPrevious.addEventListener("click", () => keenSlider.prev());
+      keenSliderNext.addEventListener("click", () => keenSlider.next());
+
+      keenSliderPreviousDesktop.addEventListener("click", () =>
+        keenSlider.prev()
+      );
+      keenSliderNextDesktop.addEventListener("click", () => keenSlider.next());
+      return () => {
+        keenSlider.destroy();
+      };
+    }
+  }, [animationDuration, sliderRef2]);
+
   return (
     <>
       {" "}
@@ -172,7 +266,7 @@ const Testimonials = () => {
         href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
         rel="stylesheet"
       />
-      <div className="relative  top-[50vh] left-[30vw] right-0  xs:-top-16 xs:-left-[10rem]   -z-9 h-[370px] xs:h-[330px] w-full">
+      <div className="relative  top-[50vh] left-[30vw] right-0  xs:-top-26 xs:-left-[20rem]   -z-9 h-[370px] xs:h-[430px] w-full">
         <svg
           className="absolute "
           width="1132"
@@ -211,7 +305,7 @@ const Testimonials = () => {
             <div className="dark:text-white    font-poppins">
               <div className="flex flex-col font-poppins">
                 <span className="  text-[32px] font-poppins">
-                  What Our Riders Say.
+                WHAT OUR RIDERS SAY
                 </span>
               </div>
 
@@ -228,8 +322,20 @@ const Testimonials = () => {
 
         <div className="z-[100]">
           <Fade right>
-            <div className="xl:w-[42vw] lg:w-[70vw] lg:h-[50vh]  lg:mt-12  xs:mt-16 xl:h-[44vh]  xl:mt-0 xs:w-[20rem] xs:h-[16rem] bg-white rounded-[4rem] xs:rounded-[2rem]">
-              <div id="keen-slider" ref={sliderRef} className="keen-slider  ">
+            <div className="xl:w-[42vw] sm:hidden lg:w-[70vw] lg:h-[50vh]  lg:mt-12  xs:mt-16 xl:h-[44vh]  xl:mt-0 xs:w-[20rem] xs:h-[16rem] bg-white rounded-[4rem] xs:rounded-[2rem]">
+              <div id="keen-slider" ref={sliderRef} className="keen-slider">
+                {/* Your card content goes here */}
+                {monials.map((monial, index) => (
+                  <BlockquoteComponentmobile
+                    key={index}
+                    index={index}
+                    monial={monial}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="xl:w-[42vw] xs:hidden ss:hidden lg:w-[70vw] lg:h-[50vh]  lg:mt-12  xs:mt-16 xl:h-[44vh]  xl:mt-0 xs:w-[20rem] xs:h-[16rem] bg-white rounded-[4rem] xs:rounded-[2rem]">
+              <div id="keen-slider2" ref={sliderRef2} className="keen-slider  ">
                 {/* Your card content goes here */}
                 {monials.map((monial, index) => (
                   <BlockquoteComponent
